@@ -4,3 +4,7 @@
 body {
   background-image: url("/assets/images/bg.jpg");
 }
+
+label {
+  color: white;
+}
