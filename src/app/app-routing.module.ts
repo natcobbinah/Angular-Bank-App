@@ -11,20 +11,38 @@ import { PcloseclientAccountComponent } from './pcloseclient-account/pcloseclien
 import { PopenclientAccountComponent } from './popenclient-account/popenclient-account.component';
 import {PregisterclientComponent} from './pregisterclient/pregisterclient.component';
 import { PviewclientdetailsComponent } from './pviewclientdetails/pviewclientdetails.component';
+import { WelcomeContentComponent } from './welcome-content/welcome-content.component';
 
-const routes: Routes = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
+export const bankhome_ChildrenRoutes: Routes = [
   {path:'registerClient',component: PregisterclientComponent},
   {path:'viewCient',component: PviewclientdetailsComponent},
   {path:'openClientAccount',component:PopenclientAccountComponent},
   {path:'closeClientAccount',component:PcloseclientAccountComponent},
+];
+
+export const clientshome_ChildrenRoutes: Routes = [
   {path: 'clientmakeDeposit',component:ClientmakedepositComponent},
   {path: 'clientmakeWithdrawal',component:ClientmakewithdrawalComponent},
   {path: 'clientmakeTransfer',component: ClientmaketransferComponent},
   {path:'clientaccountDetails',component:ClientaccountdetailsComponent},
   {path: 'clientrecordTransactions',component:ClienttransactionrecordsComponent},
-  {path: 'clientHome',component:ClienthomeComponent},
-  {path: 'home',component:HomeComponent},
+]
+
+
+const routes: Routes = [
+  //{path:'registerClient',component: PregisterclientComponent},
+  //{path:'viewCient',component: PviewclientdetailsComponent},
+  //{path:'openClientAccount',component:PopenclientAccountComponent},
+  //{path:'closeClientAccount',component:PcloseclientAccountComponent},
+  //{path: 'clientmakeDeposit',component:ClientmakedepositComponent},
+  //{path: 'clientmakeWithdrawal',component:ClientmakewithdrawalComponent},
+  //{path: 'clientmakeTransfer',component: ClientmaketransferComponent},
+  //{path:'clientaccountDetails',component:ClientaccountdetailsComponent},
+  //{path: 'clientrecordTransactions',component:ClienttransactionrecordsComponent},
+  {path:'',redirectTo:'welcome',pathMatch:'full'},
+  {path:'welcome',component:WelcomeContentComponent},
+  {path: 'clientHome',component:ClienthomeComponent,children:clientshome_ChildrenRoutes},
+  {path: 'home',component:HomeComponent,children:bankhome_ChildrenRoutes},
 ];
 
 @NgModule({

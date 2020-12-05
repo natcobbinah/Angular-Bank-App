@@ -16,6 +16,7 @@ import { ClientaccountdetailsComponent } from './clientaccountdetails/clientacco
 import { ClienttransactionrecordsComponent } from './clienttransactionrecords/clienttransactionrecords.component';
 import { ClienthomeComponent } from './clienthome/clienthome.component';
 import { ClientsearchComponent } from './clientsearch/clientsearch.component';
+import { WelcomeContentComponent } from './welcome-content/welcome-content.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ClientsearchComponent } from './clientsearch/clientsearch.component';
     ClientaccountdetailsComponent,
     ClienttransactionrecordsComponent,
     ClienthomeComponent,
-    ClientsearchComponent
+    ClientsearchComponent,
+    WelcomeContentComponent
   ],
   imports: [
     BrowserModule,
