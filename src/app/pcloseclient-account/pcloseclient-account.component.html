@@ -1,0 +1,27 @@
+<div class="container">
+    <!-- Search client box added here -->
+    <app-search-client></app-search-client>
+
+    <form>
+        <div class="form-group my-2">
+          <label for="accountnolbl">Account Number(assigned)</label>
+          <input type="text" class="form-control form-control-lg" id="accountnolbl" placeholder="2435345">
+        </div>
+
+        <label class="my-1 mr-2" for="accountstatuslbl">Account Status</label>
+        <select class="custom-select my-1 mr-sm-2" id="accountstatuslbl">
+          <option value="active">ACTIVE</option>
+          <option value="closed">CLOSED</option>
+        </select>
+        
+
+        <div class="form-group my-2">
+            <label for="balancelbl">Balance</label>
+            <input type="text" class="form-control form-control-lg" id="balancelbl" readonly>
+          </div>
+
+        <button type="submit" class="btn btn-primary mr-2">Withdraw</button>
+        <button type="submit" class="btn btn-primary mr-2">CloseAccount</button>
+      <button type="reset" class="btn btn-primary">Clear</button>
+      </form>
+</div>

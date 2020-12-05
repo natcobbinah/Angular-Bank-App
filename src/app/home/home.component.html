@@ -1,0 +1,26 @@
+<div class="container my-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/registerClient']">RegisterClient</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/viewCient']">ViewClientDetails</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/openClientAccount']">OpenClientDetails</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/closeClientAccount']">CloseClientDetails</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+          <router-outlet></router-outlet>
+      </div>
+    </div>
